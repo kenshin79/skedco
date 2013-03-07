@@ -84,6 +84,7 @@
 		$source_list = $this->config->item('source_list');
 		$app_status_list = $this->config->item('app_status_list');
 		foreach ($opd_census as $oc){
+			if ($oc->status == 1){
 			echo "<tr><td>".$y."</td>";
 			echo "<td>".date('m/d/Y', strtotime($oc->app_date))." - ".$period_list[$oc->period]."</td>";
 			echo "<td>".$oc->rname."</td>";
@@ -93,10 +94,8 @@
 			echo "<td>".$source_list[$oc->source]."</td>";
 			echo "<td><textarea readonly=\"readonly\" cols = \"15\" rows = \"3\" >".revert_input($oc->dx)."</textarea>";
 			echo "<td>".$app_status_list[$oc->status]."</td></tr>";
-
-		
 			$y++;
-		
+			}		
 		}
 		echo "</table>";
 	}
