@@ -1,0 +1,1 @@
+<div class="center_logo"><a href="/skedco/index.php/welcome/admin_page" alt=""><img src="/skedco/img/skedco.png" class="main_logo" /></a></div>

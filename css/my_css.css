@@ -1,0 +1,568 @@
+table, th, td {
+	border: 1px solid black;
+	border-collapse:collapse;
+	vertical-align:top;
+	text-align:left;
+	
+}
+
+.tally{
+	width: 50px;
+	
+}
+
+.date_width {
+	width: 200px;
+	
+}
+
+.title2{
+	color: red;
+	
+}
+
+.num{
+	width: 30px;
+}
+
+.rname{
+	width: 217px;
+	
+}
+.rname2{
+	width:224px;
+}
+
+.age{
+	width:90px;
+}
+
+.cnum{
+	width:100px;
+}
+
+.address{
+	
+	width:150px;
+}
+
+.date_picker{
+	width:250px;
+}
+
+.status{
+	width:100px;
+}
+
+.clinic_sched{
+	width:200px;
+	
+}
+
+.clinic_list{
+	width: 150px;
+}
+
+.submit_button{
+	width:100px;
+}
+
+/*tally table */
+#day_date_tally{
+	position:relative;
+	top:0;
+	left:10px;
+	height:50px;
+	width:1000px;
+	background-color:green;
+	font-size:larger;
+	
+}
+
+#clinic_label{
+
+	top:50px;
+	left:-1000px;
+	height: 50px;
+	width:1000px;
+	background-color:yellow;
+	font-size:large;
+	
+}
+
+
+#resident_label{
+	position:relative;
+	top:100px;
+	left:-1000px;
+	height:50px;
+	background-color:orange;
+	font-size:medium;
+}
+
+#per_resident_tally{
+	
+	
+}
+
+.rname2{
+	width:224px;
+}
+
+.tally{
+	width: 46px;
+	
+}
+
+.menu_img{
+	width:90px;
+	height:90px;
+	
+}
+.menu_text{
+	font-size:large;
+	font-weight:bold;
+	color:maroon;
+	text-align:center;
+	
+	
+}
+
+.center_menu{
+	position:absolute;
+	border:hidden;
+	width:630px;
+	height:90px;
+	top:50%;
+	left:50%;
+	margin-left:-315px;
+	margin-top:0px;	
+	
+}
+.center_menu td{
+	border:hidden;
+	
+}
+
+.small_icon{
+	width:40px;
+	height:40px;
+	
+}
+
+.all_right{
+	float:right;	
+	
+}
+
+.all_left{
+	float:left;
+	
+}
+.hover_icon{
+	width:150px;
+	height:150px;
+	
+}
+
+.main_logo{
+	width:500px;
+	height:200px;
+	
+	
+}
+
+.center_logo{
+	position:absolute;
+	
+	width:300px;
+	top:50%;
+	left:50%;
+	margin-left:-250px;
+	margin-top:-200px;	
+}
+
+.smaller_fonts{
+	font-size:small;
+	font-family:"Arial Narrow";
+	
+}
+
+.larger_font{
+	font-size:large;
+	font-weight:bold;
+	
+}
+.name_length{
+	width:300px;
+	
+}
+
+
+.changeScreen{
+	position:absolute;
+	left:200px;
+	top:50px;
+	
+	
+}
+
+.datePickScreen{
+	position:absolute;
+	left:20px;
+	top:180px;
+		
+	
+}
+
+.hover_click{
+	color:maroon;
+	font-size:large;
+	
+	
+}
+
+.mother_table tr{
+	background-color:#F8F2C6 ;
+}
+.tally_table{
+	border:hidden;	
+	
+}
+
+.tally_table tr{
+	background-color:#FFFFCC;
+}
+
+.tally_table tr:hover{
+	color:maroon;
+	font-style:oblique;
+	font-weight:bolder;
+	font-size:large;
+	cursor:pointer;
+	
+}
+
+.tally_table2 tr{
+	background-color:#FFFFCC;
+}
+
+.tally_table2 tr:hover{
+	color:red;
+	font-style:italic;
+	font-size:large;
+	cursor:pointer;
+	
+}
+
+button{
+	color: maroon;
+	font-weight: bold;
+	width:100px;
+	height:20px;
+}
+
+.submit{
+	color: maroon;
+	font-weight: bold;
+	width:100px;
+	height:20px;
+}
+
+#login_logo img{
+	width:500px;
+	height:300px;
+	
+}
+
+#login_logo{
+	position:absolute;
+	width:500px;
+	height:300px;
+	top:50%;
+	left:50%;
+	margin-top:-230px;
+	margin-left:-180px;
+}
+
+#login_form{
+	position:absolute;
+	width:500px;
+	height:300px;
+	top:50%;
+	left:50%;
+	margin-left:-70px;
+	margin-top: +80px;
+	
+}
+
+#login_form label{
+	font-size:large;
+	font-weight:bold;	
+	
+}
+#error_log{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:150px;
+	height:50px;
+	color:red;
+	font-size:medium;
+}
+#footer{
+	position:absolute;
+	float:left;
+	bottom:0;
+	font-size:smaller;
+	font-family:"Comic Sans MS";
+	
+
+	
+}
+#footer img{
+	width:30px;
+	height:30px;
+}
+#logout img{
+	width:100px;
+	height:100px;
+}
+
+#logout{
+	position:absolute;
+	top:0%;
+	left:20px;
+	width:300px;
+	height:300px;
+
+}
+#show_reports{
+	position:absolute;
+	top:500px;
+	left:20px;	
+	
+}
+#census1{
+	position:absolute;
+	width:200px;
+	height:200px;
+	top:50px;
+	left:10px;
+}
+
+#census2{
+	position:absolute;
+	width:200px;
+	height:200px;
+	top:50px;
+	left:220px;
+}
+#census3{
+	position:absolute;
+	width:200px;
+	height:400px;
+	top:260px;
+	left:10px;
+}
+#census4{
+	position:absolute;
+	width:200px;
+	height:400px;
+	top:260px;
+	left:220px;
+}
+
+#census5{
+	position:absolute;
+	width:200px;
+	height:400px;
+	top:260px;
+	left:430px;
+}
+#census6{
+	position:absolute;
+	width:800px;
+	top:670px;
+	left:10px;
+}
+
+#res1{
+	position:absolute;
+	width:200px;
+	height:200px;
+	top:80px;
+	left:10px;	
+	
+}
+
+#res2{
+	position:absolute;
+	width:200px;
+	height:200px;
+	top:80px;
+	left:220px;	
+	
+}
+#res3{
+	position:absolute;
+	width:800px;
+	top:300px;
+	left:10px;	
+	
+}
+.title{
+	width:500px;
+	height:80px;
+	position: absolute;
+	left:0%;
+	margin-left:10px;
+	margin-top:10px;	
+	color:maroon;
+	font-weight:bold;
+}
+
+#search_residents{
+	position:absolute;
+	left:10px;
+	top:0%;
+	margin-top: 150px;
+}
+#search_patients{
+	position:absolute;
+	left:20px;
+	top:0%;
+	margin-top: 150px;
+}
+#search_patients2{
+	position:absolute;
+	left:0%;
+	top:0%;
+	margin-top: 80px;
+}
+
+#patient_results{
+	position:absolute;
+	left:0%;
+	top:0%;
+	margin-left:300px;
+	margin-top: 150px;	
+	
+}
+#resident_results{
+	position:absolute;
+	left:0%;
+	top:0%;
+	margin-left:280px;
+	margin-top: 150px;	
+	
+}
+#reports_main{
+	position:absolute;
+	left:0%;
+	top:0%;
+	margin-top: 150px;
+}
+
+#musers{
+	position:absolute;
+	left:0%;
+	top:0%;
+	margin-left:20px;
+	margin-top: 150px;
+}
+
+#search_addapp{
+	position:relative;
+	top:100px;
+	
+}
+
+#show_patients, #schedule2{
+
+	top: 120px;
+}
+.tally_table tr th:nth-child(1){
+	background-color:#82CC82;
+}
+
+.tally_table tr th:nth-child(8){
+	background-color:#82CC82;
+}
+
+.tally_table tr th:nth-child(2){
+	background-color:#B2FFFF;
+}
+
+.tally_table tr th:nth-child(3){
+	background-color:#A3FFA3;
+}
+
+.tally_table tr th:nth-child(4){
+	background-color:#FFCCD4;
+}
+
+.tally_table tr th:nth-child(5){
+	background-color:#FFF3B2;
+}
+
+.tally_table tr th:nth-child(6){
+	background-color:#FFA5D2;
+}
+
+.tally_table tr th:nth-child(7){
+	background-color:#FFBCA2;
+}
+
+
+.mother_table tr th:nth-child(2){
+	background-color:#B2FFFF;
+}
+
+.mother_table tr th:nth-child(3){
+	background-color:#A3FFA3;
+}
+
+.mother_table tr th:nth-child(4){
+	background-color:#FFCCD4;
+}
+
+.mother_table tr th:nth-child(5){
+	background-color:#FFD700;
+}
+
+.mother_table tr th:nth-child(6){
+	background-color:#FF704D;
+}
+
+.mother_table tr th:nth-child(7){
+	background-color:#E6E6E6;
+}
+
+.mother_table tr th:nth-child(9){
+	background-color:#B2FFFF;
+}
+
+.mother_table tr th:nth-child(10){
+	background-color:#A3FFA3;
+}
+
+.mother_table tr th:nth-child(11){
+	background-color:#FFCCD4;
+}
+
+.mother_table tr th:nth-child(12){
+	background-color:#FFD700;
+}
+
+.mother_table tr th:nth-child(13){
+	background-color:#FF704D;
+}
+
+.mother_table tr th:nth-child(14){
+	background-color:#E6E6E6;
+}
+
+.mother_table > tr:nth-child(2) th:nth-child(1){
+	background-color:#FFCCD4;
+}
