@@ -196,7 +196,7 @@ var $period = "";
     }
     
 	function getResidentCensus($date1, $date2, $resident){
-		$this->db->select('app_date, pname, sex, birthdate, casenumber, rname, type, source, schedules.status AS status, period');
+		$this->db->select('app_date, pname, sex, birthdate, casenumber, rname, type, source, dx, schedules.status AS status, period');
 		$this->db->join('patients', 'patients.p_id = schedules.p_id', 'inner');
 		$this->db->join('residents', 'residents.r_id = schedules.r_id', 'inner');
 		$this->db->where('schedules.r_id', $resident);

@@ -36,7 +36,7 @@
 		$period_list = $this->config->item('period_list');
 		$y = 1;
 		echo "<table id=\"res3\">";
-		echo "<tr><th>No.</th><th>Date of Appointment</th><th>Patient<th>Case Number</th><th>Type</th><th>Source</th><th>Status</th></tr>";
+		echo "<tr><th>No.</th><th>Date of Appointment</th><th>Patient<th>Case Number</th><th>Type</th><th>Source</th><th>Diagnosis</th><th>Status</th></tr>";
 		$type_list = $this->config->item('type_list');
 		$source_list = $this->config->item('source_list');
 		$app_status_list = $this->config->item('app_status_list');
@@ -47,6 +47,7 @@
 			echo "<td>".$rc->casenumber."</td>";
 			echo "<td>".$type_list[$rc->type]."</td>";
 			echo "<td>".$source_list[$rc->source]."</td>";
+			echo "<td><textarea readonly=\"readonly\">".$rc->dx."</textarea></td>";
 			echo "<td>".$app_status_list[$rc->status]."</td></tr>";
 			$y++;
 		
