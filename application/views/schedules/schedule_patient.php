@@ -21,8 +21,9 @@
 	  $myCalendar->disabledDay("sun");
 	  $myCalendar->writeScript();
 	  echo form_close();
-	  echo "<button name = \"date\" onClick = \"showClinicDay(document.forms['date1_form']['mydate'].value)\" >Refresh Tally</button>";
-	  ?> 
+	  //echo "<button name = \"date\" onClick = \"showClinicDay(document.forms['date1_form']['mydate'].value)\" >Refresh Tally</button>";
+	  echo "<button name = \"date\" onClick = \"showClinicDay(document.getElementById('mydate').value)\" >Refresh Tally</button>";
+	  	  ?> 
 </div>
 
 <div id="schedule2">
