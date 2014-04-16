@@ -36,9 +36,12 @@
 		echo "<table>";
 		echo form_open('', array('name'=>"addP"));		
 		echo "<tr><th class=\"name\">Patient Name</th><th>Sex</th><th>Case Number</th><th class=\"date_picker\">Birth Date</th><th class = \"address\">Address</th><th class=\"submit_button\">Action</th></tr>";
-		echo "<tr><td class=\"name\"><input type=\"text\" name=\"pname\" size=\"30\"></td>";
-		echo "<td class=\"sex\">".form_dropdown('sex', array('M'=>"Male", 'F'=>"Female"), 'M')."</td>";
-		echo "<td><input type=\"text\" name=\"casenumber\" size=\"12\"></td>";
+		//echo "<tr><td class=\"name\"><input type=\"text\" name=\"pname\" size=\"30\"></td>";
+		echo "<tr><td class=\"name\"><input type=\"text\" name=\"pname\" size=\"30\" id=\"paddpname\"></td>";
+		//echo "<td class=\"sex\">".form_dropdown('sex', array('M'=>"Male", 'F'=>"Female"), 'M')."</td>";
+		echo "<td class=\"sex\">".form_dropdown('sex', array('M'=>"Male", 'F'=>"Female"), 'M', 'id="paddsex"')."</td>";		
+		//echo "<td><input type=\"text\" name=\"casenumber\" size=\"12\"></td>";
+		echo "<td><input type=\"text\" name=\"casenumber\" size=\"12\" id=\"paddcasenumber\"></td>";
 		echo "<td class=\"date_picker\">";
 			    require_once('calendar/classes/tc_calendar.php');
 				$myCalendar = new tc_calendar("birthdate", true, false);
@@ -54,12 +57,13 @@
 	  			$myCalendar->setAlignment('left', 'bottom');
 	  			$myCalendar->writeScript();		
 		echo "</td>";
-		echo "<td><textarea name=\"address\" cols = 10 rows = 3 ></textarea></td>"; 
+		echo "<td><textarea name=\"address\" id=\"paddaddress\" cols = 10 rows = 3 ></textarea></td>"; 
 		echo "<td class=\"submit_button\">";
 		echo form_close();		
 		$a = "document.addP";
 		$b = "document.addP.sex.options.selectedIndex";
-		echo "<button onclick = \"addSchedPatient('".$period."', '".$r_id."','".$date."', ".$a.".pname.value, ".$a.".sex.options[".$b."].value, ".$a.".casenumber.value, ".$a.".birthdate.value, ".$a.".address.value)\">ADD</button>";
+//		echo "<button onclick = \"addSchedPatient('".$period."', '".$r_id."','".$date."', document.getElementById('paddpname').value, ".$a.".sex.options[".$b."].value, ".$a.".casenumber.value, ".$a.".birthdate.value, ".$a.".address.value)\">ADD</button>";
+		echo "<button onclick = \"addSchedPatient('".$period."', '".$r_id."','".$date."', document.getElementById('paddpname').value, document.getElementById('paddsex').value, document.getElementById('paddcasenumber').value, document.getElementById('birthdate').value, document.getElementById('paddaddress').value)\">ADD</button>";
 		echo "</td></tr>";
 		echo "</table>";
 
