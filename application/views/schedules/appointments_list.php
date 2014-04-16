@@ -26,13 +26,16 @@
 		echo "<td>".strtoupper($row->pname)."</td>";
 		echo "<td>".compute_age(date("Y-m-d"), $row->birthdate)."/".$row->sex."</td>";
 		echo "<td>".$row->casenumber."</td>";
-		echo "<td>".form_dropdown('type', $type_list, $row->type)."</td>";
-		echo "<td>".form_dropdown('source', $source_list, $row->source)."</td>";
+		$atype = "id=\"".$slot."type\"";
+		$asource = "id=\"".$slot."source\"";
+		echo "<td>".form_dropdown('type', $type_list, $row->type, $atype)."</td>";
+		echo "<td>".form_dropdown('source', $source_list, $row->source, $asource)."</td>";
 		echo form_close();
 		echo "<td>".$app_status_list[$row->status]."</td>";
 		$a = "document.".$slot.".type.selectedIndex";
 		$b = "document.".$slot.".source.selectedIndex";
-		echo "<td><button onclick = \"editApp('".$period."', document.".$slot.".type.options[".$a."].value, document.".$slot.".source.options[".$b."].value, '".$row->sched_id."' , '".$row->r_id."' , '".$date."')\">SAVE</button></td>";
+//		echo "<td><button onclick = \"editApp('".$period."', document.".$slot.".type.options[".$a."].value, document.".$slot.".source.options[".$b."].value, '".$row->sched_id."' , '".$row->r_id."' , '".$date."')\">SAVE</button></td>";
+		echo "<td><button onclick = \"editApp('".$period."', document.getElementById('".$slot."type').value, document.getElementById('".$slot."source').value, '".$row->sched_id."' , '".$row->r_id."' , '".$date."')\">SAVE</button></td>";
 		echo "<td><button onclick = \"deleteApp('".$period."', '".$row->sched_id."' , '".$row->r_id."' , '".$date."')\">DELETE</button></td></tr>";
 		$x++;
 	}	

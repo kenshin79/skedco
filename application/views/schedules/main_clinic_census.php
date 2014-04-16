@@ -18,14 +18,19 @@
 	  $myCalendar->disabledDay("Sat");
 	  $myCalendar->disabledDay("sun");
 	  $myCalendar->writeScript();
+	  
+//<button onclick="censusPatients2(document.census_day.mydate.value);">Refresh</button>	  
+//<input name="search_p" type="text" size="20" id="search_p" onkeyup="censusPatients(document.census_day.mydate.value)"/>
+
 ?>
+<?php echo form_close(); ?>
+<button onclick="censusPatients2(document.getElementById('mydate').value);">Refresh</button>
 <h2>Search patients</h2>
 <h4>(min 3 chars):</h4>
-<input name="search_p" type="text" size="20" id="search_p" onkeyup="censusPatients(document.census_day.mydate.value)"/>
+<input name="search_p" type="text" size="20" id="search_p" onkeyup="censusPatients(document.getElementById('mydate').value)"/>
 
-<?php echo form_close(); ?>
+
 </div>
-
 <div id="show_patients"></div>
 
 

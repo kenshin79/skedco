@@ -22,16 +22,19 @@ if ($like_apps){
 		echo "<tr><td>".$y.":".$period_list[$la->period]."</td><td>".$la->pname." ".compute_age(date("Y-m-d"), $la->birthdate)."/".$la->sex."</td>";
 		echo "<td>".$la->casenumber."</td>";
 		echo "<td>".$la->rname."</td>";
+		$estatus = "id=\"".$formname."status\"";
+		$edx = "id=\"".$formname."dx\"";		
 		echo "<td>".form_dropdown('', $type_list, $la->type, 'disabled = "disabled"')."</td>";
 		echo "<td>".form_dropdown('', $source_list, $la->source, 'disabled = "disabled"')."</td>";
 	    $user_access = $this->session->userdata('user_access');
 		if ($user_access !=1 ){
-			echo "<td>".form_dropdown('status', $app_status_list, $la->status)."</td>";
+			echo "<td>".form_dropdown('status', $app_status_list, $la->status, $estatus)."</td>";
 		}	
-		echo "<td><textarea name = \"dx\" cols=\"15\" rows=\"3\" >".revert_input($la->dx)."</textarea></td>";
+		echo "<td><textarea name = \"dx\" cols=\"15\" rows=\"3\" ".$edx." >".revert_input($la->dx)."</textarea></td>";
 		$a = "document.".$formname.".status";
 		echo form_close();
-		echo "<td><button onclick = \"editLikeApp('".$la->sched_id."', ".$a.".options[".$a.".selectedIndex].value, document.".$formname.".dx.value, '".$date."', '".$clue."')\">SAVE</button>";
+//		echo "<td><button onclick = \"editLikeApp('".$la->sched_id."', ".$a.".options[".$a.".selectedIndex].value, document.".$formname.".dx.value, '".$date."', '".$clue."')\">SAVE</button>";
+		echo "<td><button onclick = \"editLikeApp('".$la->sched_id."', document.getElementById('".$formname."status').value, document.getElementById('".$formname."dx').value, '".$date."', '".$clue."')\">SAVE</button>";
 		echo "<button onclick = \"deleteLikeApp('".$la->sched_id."', '".$date."', '".$clue."')\">DELETE</button></td>";
 		echo "</tr>";
 		$y++;
