@@ -18,9 +18,10 @@
 			echo form_open('', array('name'=>$formname));
 
 			echo "<tr><td class=\"num\">".$y."</td>";
-			echo "<td class=\"rname\"><input type=\"text\" name=\"pname\" size= 30 value= \"".strtoupper($row->pname)."\"></td>";
-			echo "<td class=\"age\">".form_dropdown('sex', array('M'=>"Male", 'F'=>"Female"), $row->sex)."</td>";
-			echo "<td class=\"cnum\"><input type=\"text\" name=\"casenumber\" size=\"10\" value=\"".$row->casenumber."\"></td>";
+			echo "<td class=\"rname\"><input type=\"text\" name=\"pname\" id=\"".$formname."pname\" size= 30 value= \"".strtoupper($row->pname)."\"></td>";
+			$esex = "id=\"".$formname."sex\"";
+			echo "<td class=\"age\">".form_dropdown('sex', array('M'=>"Male", 'F'=>"Female"), $row->sex, $esex)."</td>";
+			echo "<td class=\"cnum\"><input type=\"text\" name=\"casenumber\" id=\"".$formname."casenumber\" size=\"10\" value=\"".$row->casenumber."\"></td>";
 			echo "<td class=\"date_picker\">";
 			    require_once('calendar/classes/tc_calendar.php');
 				$myCalendar = new tc_calendar($date, true);
@@ -36,12 +37,13 @@
 	  			$myCalendar->setAlignment('left', 'bottom');
 	  			$myCalendar->writeScript();
 			echo "</td>";
-			echo "<td class = \"address\"><textarea  name=\"address\" cols = 15 rows = 3 >".$row->address."</textarea></td>"; 
+			echo "<td class = \"address\"><textarea  name=\"address\" id=\"".$formname."address\" cols = 15 rows = 3 >".$row->address."</textarea></td>"; 
 			echo form_close();
 			echo "<td class=\"submit_button\">";
 			$a = "document.".$formname;
 			$b = "document.".$formname.".sex.selectedIndex";			
-			echo "<button onclick = \"editPatient('".$row->p_id."', '".$clue."', ".$a.".pname.value, ".$a.".sex.options[".$b."].value, ".$a.".casenumber.value, ".$a.".$date.value, ".$a.".address.value)\">SAVE</button>";
+			//echo "<button onclick = \"editPatient('".$row->p_id."', '".$clue."', ".$a.".pname.value, ".$a.".sex.options[".$b."].value, ".$a.".casenumber.value, ".$a.".$date.value, ".$a.".address.value)\">SAVE</button>";
+			echo "<button onclick = \"editPatient('".$row->p_id."', '".$clue."', document.getElementById('".$formname."pname').value, document.getElementById('".$formname."sex').value, document.getElementById('".$formname."casenumber').value, document.getElementById('".$date."').value, document.getElementById('".$formname."address').value)\">SAVE</button>";
 			$user_access = $this->session->userdata('user_access');
 			if($user_access == 0){
 				echo "<button onclick = \"deletePatient('".$row->p_id."', '".$clue."')\">DELETE</button>";
